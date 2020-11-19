@@ -1,9 +1,9 @@
 #!/bin/bash 
 shopt -s extglob
-passPat3="(?=.*[0-9])+(?=.*[a-z])+(?=.*[A-Z])+(?=.*[,.;()*&@#$])+[a-zA-Z0-9,.;()*&@#$]{8,}"
-read -p "enter valid password " password
+emailpat="^[0-9a-zA-Z]+([.\-_+][0-9a-zA-Z]+)*@[a-z0-9A-Z]+.[a-z]{2,4}([.][a-zA-Z]{2})*$""
+read -p "enter email  " email
 
-if [[ $password =~ $passPat3 ]]
+if [[ $email =~ $emailPat ]]
 then
    echo "Pattern matching"
 else
