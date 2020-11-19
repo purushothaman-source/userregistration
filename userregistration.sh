@@ -1,9 +1,9 @@
 #!/bin/bash 
 shopt -s extglob
-passPat1="^[a-zA-Z0-9]{8,}$"
+passPat2="(?=.*[0-9])+(?=.*[a-z])+(?=.*[A-Z])+[a-zA-Z0-9]{8,}"
 read -p "enter valid password " password
 
-if [[ $password =~ $passPat1 ]]
+if [[ $password =~ $passPat2 ]]
 then
    echo "Pattern matching"
 else
